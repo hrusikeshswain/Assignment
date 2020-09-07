@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/toprounded_rect_white"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp"
+        android:background="@android:color/transparent">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="45dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_check_black_24dp" />
+
+        <TextView
+            android:id="@+id/txt_thanku"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="Thank You!"
+            android:textColor="#182C5D"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/txt_request_msg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="@string/request_msg"
+            android:textColor="#959698"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/txt_thanku"
+            app:layout_constraintStart_toStartOf="@+id/txt_thanku"
+            app:layout_constraintTop_toBottomOf="@+id/txt_thanku" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="138dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/prop_ok_rounded"
+            android:text="ok"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="@+id/txt_request_msg"
+            app:layout_constraintStart_toStartOf="@+id/txt_request_msg"
+            app:layout_constraintTop_toBottomOf="@+id/txt_request_msg" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
